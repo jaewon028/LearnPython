@@ -36,8 +36,8 @@ for score in scores:
 print("총점 : {0}".format(total))
 
 #2~9단 구구단
-dan = range(2,10)
-num = range(1, 10)
+dan = range(2,10) # 2 부터 9 까지
+num = range(1, 10) # 1 부터 9 까지
 
 for i in dan: # 2부터
     for k in num: # 1부터
@@ -46,8 +46,8 @@ for i in dan: # 2부터
             print()
 
 #기본 while
-dan2 = 4;
-i=1;
+dan2 = 4
+i=1
 while i < 10:
     print("{0} X {1} = {2:>2}".format(dan2, i, dan2*i))
     i += 1
