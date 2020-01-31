@@ -168,16 +168,17 @@ print("=====================================")
  2. 기존의 함수처럼 매개변수의 인자로 전달함
  3. 함수의 매개변수에 직접 인자로 전달함
 '''
+
+
 def calc2(operator_fn, x, y):
     return operator_fn(x, y)
 
-ret_val = calc2(lambda a, b: a+b, 10, 5)
+
+ret_val = calc2(lambda a, b: a + b, 10, 5)
 print("calc2(lambda a, b: a+b, 10, 5)의 결과 값: {}".format(ret_val))
 
-ret_val = calc2(lambda a, b: a-b, 10, 5)
+ret_val = calc2(lambda a, b: a - b, 10, 5)
 print("calc2(lambda a, b: a-b, 10, 5)의 결과 값: {}".format(ret_val))
-
-
 
 print("=======================================")
 # 클로저
@@ -188,36 +189,44 @@ print("=======================================")
     2) 전역변수의 남용 방지
     3) 메서드가 하나밖에 없는 객체를 만드는 것보다 우아한 구현 가능
 '''
+
+
 def outer_func():
     id = 0
 
     def inner_func():
-        nonlocal id # 변수 id가 중첩함수인 inner_func 함수의 지역변수가 아님
-                    # 변수 id 접근시 outer_func 함수 스코프에서 찾게 만듦
-        id+=1
+        nonlocal id  # 변수 id가 중첩함수인 inner_func 함수의 지역변수가 아님
+        # 변수 id 접근시 outer_func 함수 스코프에서 찾게 만듦
+        id += 1
         return id
-    return inner_func # 주의!! 여기서 inner_func() 함수호출이 아닌 함수에 대한 참조를 반환함에 주의하자
+
+    return inner_func  # 주의!! 여기서 inner_func() 함수호출이 아닌 함수에 대한 참조를 반환함에 주의하자
+
 
 make_id = outer_func()
 print("make_id() 호출의 결과: {}".format(make_id()))
 print("make_id() 호출의 결과: {}".format(make_id()))
 print("make_id() 호출의 결과: {}".format(make_id()))
 
-
 print("===========================================")
+
+
 # 함수를 활용한 원의 둘레와 면적 구하기
 # 반지름 입력, 원의 면적 계산, 원의 둘레 계산
 def input_radius():
     radius_str = input("반지름을 입력하세요: ")
     return float(radius_str)
 
+
 def calc_circle_area(r):
     return 3.14 * r * r
+
 
 def calc_circumference(r):
     return 2 * 3.14 * r
 
+
 radius = input_radius()
 circle_area = calc_circle_area(radius)
 circumference = calc_circumference(radius)
-print("원의 면적 : {0:0.2F}, 원의 둘레: {1:0.2F}".format(circle_area, circumference)) # 0.2F 소숫점 둘 째 자리까지 계산
+print("원의 면적 : {0:0.2F}, 원의 둘레: {1:0.2F}".format(circle_area, circumference))  # 0.2F 소숫점 둘 째 자리까지 계산
