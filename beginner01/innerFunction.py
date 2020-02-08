@@ -281,3 +281,4 @@ print("data_list에 대한 입력 map 함수의 적용 결과 : {}".format(map_l
 filter_str = input("항목 x에 대하여 필터링할 조건의 표현식을 입력 : ")
 filter_list = list(map(lambda x: eval(filter_str),map_list))
 print("data_list에 대한 입력 filter 함수의 적용 결과 : {}".format(filter_list))
+
