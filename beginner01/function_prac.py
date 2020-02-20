@@ -44,3 +44,65 @@ rock_scissors_paper()
 
 # 6321 function 03
 number = int(input())
+
+
+def is_prime():
+    cnt = 0
+    for i in range(2, number):
+        if number % i == 0:
+            cnt += 1
+    if cnt == 0:
+        print(cnt)
+        print("소수입니다.")
+        return True
+    else:
+        print(cnt)
+        print("소수가 아닙니다.")
+        return False
+
+
+is_prime()
+
+
+# 6323 function 04
+memo = {1:1, 2:1}
+fibonacci_list = int(input("fibonacci num input : "))
+def fibo(n):
+    if n not in memo:
+        memo[n] = fibo(n-1) + fibo(n-2)
+    return memo[n]
+
+
+fibo(fibonacci_list)
+for i in range(1, fibonacci_list):
+    print("{}, ".format(memo[i]), end='')
+print("{}]".format(memo[fibonacci_list]))
+'''
+def fibonacci(n):
+    if n > 2:
+        fibonacci_list.append((fibonacci(n-1) + fibonacci(n-2)))
+        return fibonacci(n - 1) + fibonacci(n - 2)
+    else:
+        return 1
+
+fibonacci(10)
+print("fibonacci 값 : {}".format(fibonacci_list))
+
+'''
+
+
+# 6324 function 05
+li = [1,2,3,4,3,2,1]
+
+new_list = list()
+def newlist(li):
+    global new_list
+    for n in range(len(li)):
+        num = li[n]
+        if num not in new_list:
+            new_list.append(num)
+
+print(li)
+newlist(li)
+print(new_list)
+
