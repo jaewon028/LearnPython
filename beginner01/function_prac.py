@@ -147,3 +147,16 @@ def square(value):
 num1, num2 = map(int, input().split(','))
 print("square({0}) => {1}".format(num1, square(num1)))
 print("square({0}) => {1}".format(num2, square(num2)))
+
+
+# 6328 function 09
+def moreLength(value1, value2):
+    if len(value1) > len(value2):
+        print("{}".format(value1))
+    else:
+        print("{}".format(value2))
+
+
+string1 = input("input string1 : ")
+string2 = input("input string2 : ")
+moreLength(string1, string2)
