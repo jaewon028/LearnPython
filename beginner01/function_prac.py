@@ -63,13 +63,14 @@ def is_prime():
 
 is_prime()
 
-
 # 6323 function 04
-memo = {1:1, 2:1}
+memo = {1: 1, 2: 1}
 fibonacci_list = int(input("fibonacci num input : "))
+
+
 def fibo(n):
     if n not in memo:
-        memo[n] = fibo(n-1) + fibo(n-2)
+        memo[n] = fibo(n - 1) + fibo(n - 2)
     return memo[n]
 
 
@@ -90,19 +91,59 @@ print("fibonacci 값 : {}".format(fibonacci_list))
 
 '''
 
-
 # 6324 function 05
-li = [1,2,3,4,3,2,1]
+li = [1, 2, 3, 4, 3, 2, 1]
 
 new_list = list()
-def newlist(li):
+
+
+def newlist(list05):
     global new_list
-    for n in range(len(li)):
-        num = li[n]
+    for n in range(len(list05)):
+        num = list05[n]
         if num not in new_list:
             new_list.append(num)
+
 
 print(li)
 newlist(li)
 print(new_list)
 
+# 6325 function 06
+li06 = [2, 4, 6, 8, 10]
+
+
+def search_list06(value, list06):
+    if value not in list06:
+        print("{0} => False".format(value))
+    if value in list06:
+        print("{0} => True".format(value))
+
+
+print(li06)
+search_list06(5, li06)
+search_list06(10, li06)
+
+
+# 6326 function 07
+def factorial(n):
+    if n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+
+factorial_input = int(input("팩토리얼 숫자 입력 : "))
+print("{}".format(factorial(factorial_input)))
+
+# 6327 function 08
+input08 = input("square num : ")
+
+
+def square(value):
+    num = value ** 2
+    return num
+
+
+num1, num2 = map(int, input().split(','))
+print("square({0}) => {1}".format(num1, square(num1)))
+print("square({0}) => {1}".format(num2, square(num2)))
