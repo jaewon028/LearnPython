@@ -160,3 +160,15 @@ def moreLength(value1, value2):
 string1 = input("input string1 : ")
 string2 = input("input string2 : ")
 moreLength(string1, string2)
+
+
+# 6329 function 10
+def countdown(n):
+    if n == 0:
+        print("0보다 큰 수를 입력해야 합니다.")
+    for i in range(n, 0, -1):
+        print(i)
+
+
+countdown(0)
+countdown(10)
