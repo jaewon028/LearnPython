@@ -9,6 +9,7 @@ print("abs{} => {}".format(val, abs(val)))
 # 첫 번째 인자를 두 번째 인자로 나눴을 때의 몫과 나머지를 튜플 객체로 변환하는 함수
 val1, val2 = 9, 5
 result_tuple = divmod(val1, val2)
+print(result_tuple)
 print("divmod{},{} => 몫: {}, 나머지: {}".format(val1, val2, *result_tuple))
 
 # 3. pow()
