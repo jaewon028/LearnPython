@@ -67,7 +67,6 @@ print("any({}) => {}".format(val, any(val)))
 # 6. enumerate()
 # List, Tuple, 문자열과 같은 시퀀스형을 입력받아 인덱스를 포함하는 튜플 객체를 항목으로 구성하는 enumerate 객체를 반환하는 함수
 data_list = [10, 20, 30, 40, 50]
-
 for idx, val in enumerate(data_list):
     print("data_list[{}]: {}".format(idx, val))
 
@@ -112,7 +111,7 @@ print("list('{}') => {} {} ".format(data_set,type(data_dict),data_dict))
 print("=" *25)
 # 9. map()
 # 두 번째 인자로 반복 가능한 자료형을 전달 받아 자료형의 각 항목에 대해 첫 번째 인자로
-# 전달 받은 함수를 적용한 겨과를 맵 객체로 변환하는 함수
+# 전달 받은 함수를 적용한 과를 맵 객체로 변환하는 함수
 data_list = list("abcdef")
 result = list(map(lambda x: x.upper(), data_list))
 print("list(map(lambda x: x.upper(), {})) => {} {}".format(data_list, type(result),result))
