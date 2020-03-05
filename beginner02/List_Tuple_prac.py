@@ -74,3 +74,34 @@ print(list06)
 num = int(input("리스트 07번 입력 : "))
 factors = [n for n in range(1, num+1) if num%n==0]
 print(factors)
+
+# 6282 List 08
+# 내포 기능도 가능...
+list08 = [1, 3, 11, 15, 23, 28, 37, 52, 85, 100]
+result = []
+for i in range(len(list08)):
+    if list08[i] % 2 == 0:
+        result.append(list08[i])
+print(result)
+
+# 6286 List 11
+list11 = [1,1]
+[list11.append(list11[i-1] + list11[i-2]) for i in range(2, 10)]
+
+print(list11)
+
+# 6288 List 12
+'''
+
+리스트 내포 기능을 이용하여 1부터 20사이의 숫자 중 3의 배수가 아니거나
+5의 배수가 아닌 숫자들의 제곱 값으로 구성된 리스트 객체를 출력하는 프로그램을 작성하십시오.
+
+'''
+list12 = list(range(1,21))
+result = []
+print(list12)
+for i in range(len(list12)):
+    if (list12[i]%3 !=0) or (list12[i]%5 != 0) :
+        result.append(list12[i]**2)
+
+print(result)
