@@ -66,6 +66,8 @@ updataeMenu = {(key, value) for key, value in newMenu.items() if value > 3000}
 # Check the combined Menu
 print(updataeMenu)
 
+print("=" * 60)
+
 # 6257 Dic 05
 '''
 리스트의 원소를 키로 하고, 그 원소의 length를 값으로 갖는 딕셔너리 객체를 생성하는 코드를 작성해봅시다.
@@ -74,6 +76,27 @@ print(updataeMenu)
 
 리스트 fruit는 다음과 같습니다. fruit = ['   apple    ','banana','  melon']
 
-출력 
+출력
 {'apple': 5, 'banana': 6, 'melon': 5}
 '''
+fruit = ['   apple    ','banana','  melon']
+
+lengthFruit = []
+
+for i in range(len(fruit)):
+    lengthFruit.append(len(fruit[i].strip()))
+
+# check each of lengths
+for i in lengthFruit:
+    print(i)
+
+newLength = {}
+for i in range(len(fruit)):
+    newLength.update({fruit[i].strip(): lengthFruit[i]})
+
+print(newLength)
+
+print("=" * 70)
+
+# 6258 DIc 06
+Dic06 = {}
