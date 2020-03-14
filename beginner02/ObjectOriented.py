@@ -427,6 +427,6 @@ class Child(Parent):
         self.__first_name = first_name # 매개변수 first_name에 의해 초기화됨.
         print("Child 클래스의 __init__() ...")
 
-
+child = Child("순신", "이")
 
 
