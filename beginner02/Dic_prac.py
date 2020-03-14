@@ -99,4 +99,7 @@ print(newLength)
 print("=" * 70)
 
 # 6258 DIc 06
-Dic06 = {}
+num = int(input("딕셔너리 06번 입력 : "))
+Dic06 = {i: i**2 for i in range(1, num+1)}
+
+print(Dic06)

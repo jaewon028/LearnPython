@@ -16,7 +16,7 @@ def get_min(init_num):
 
 TC = int(input())
 for tc in range(1, TC+1):
-    N = int(input()) # not necessary
+    #N = int(input()) # not necessary
     init_num = list(map(int, input().split()))
     result = get_max(init_num) - get_min(init_num)
     print(f'#{tc} {result}')
