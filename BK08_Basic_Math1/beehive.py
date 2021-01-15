@@ -3,11 +3,9 @@ if __name__ == "__main__":
     cnt = 1
     count_sixs = 6
     count_room = 1
-    for i in range(num):
+    while num > cnt:
         count_room += 1
         cnt += count_sixs
         count_sixs += 6
-        if num < cnt:
-            break
 
     print(count_room)
